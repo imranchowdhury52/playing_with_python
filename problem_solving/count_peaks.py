@@ -25,20 +25,25 @@ Output:
 #Solution
 
 values = [8, 10.7, 17.1, 11.2, 13.5, 9.9, 14.9, 9.4, 9.4, 3.1, 12.7]
+#values = [8, 10]
 
 def count_peaks(values):
-    peaks = 0
+    if len(values) < 3:
+        return 0
+    
+    top_peaks = 0
+    bottom_peaks = 0
 
     for i in range(1, len(values)-1):
 
         #top_peaks
         if values[i] >= values[i-1] + 5 and values[i] >= values[i+1] + 5:
-            peaks += 1
+            top_peaks += 1
         
         #bottom_peaks
         elif values[i] <= values[i-1] - 5 and values[i] <= values[i+1] - 5:
-            peaks += 1
+            bottom_peaks += 1
 
-    return peaks
+    return top_peaks + bottom_peaks
 
 print(count_peaks(values))
