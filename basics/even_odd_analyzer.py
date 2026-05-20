@@ -16,32 +16,22 @@ or zero
 
 number = int(input("Enter a number: "))
 
-
-if number > 0:
-
-    if number % 2 == 0:
-        print(number, "is Even")
+#Even or Odd
+if number % 2 == 0:
+    print(number, "is Even")
             
-    else:
-        print(number, "is Odd") 
+else:
+    print(number, "is Odd") 
 
-    print(number, "is Postive")
+
+    
+# Positive, Negative or Zero
+if number > 0:
+    print(number, "is Positive")
 
 elif number < 0:
-    if number % 2 == 0:
-        print(number, "is Even")
-            
-    else:
-        print(number, "is Odd") 
-
     print(number, "is Negative")
 
-elif number == 0:
-    if number % 2 == 0:
-        print(number, "is Even")
-            
-    else:
-        print(number, "is Odd") 
-
-    print(number, "is Zero")
+else:
+    print(f'{number} is Zero')
 
