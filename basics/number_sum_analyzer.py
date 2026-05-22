@@ -12,7 +12,7 @@ num = []
 i=1
 
 while i <= numbers:
-        inputed_number = input(f"Enter number {i}: ")
+        inputed_number = int(input(f"Enter number {i}: "))
         num.append(inputed_number) 
         i+=1
 
