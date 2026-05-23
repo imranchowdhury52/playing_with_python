@@ -13,19 +13,29 @@ Write a program that:
 
 numbers = int(input("How many numbers? "))
 
-num = []
+number_list = []
 i=1
 
 while i <= numbers:
-        inputed_number = int(input(f"Enter number {i}: "))
-        num.append(inputed_number) 
+        entered_number = int(input(f"Enter number {i}: "))
+        number_list.append(entered_number) 
         i+=1
 
-print(num)
+print(f'Numbers: {number_list}\n')
 
 #sum
-sum_num = sum(num)
+sum_num = sum(number_list)
 print(f'Sum: {sum_num}')
 
+#average
+avg_num = sum_num / len(number_list)
+print(f'Average: {avg_num}')
 
+#largest number
+largest_num = max(number_list)
+print(f'Largest: {largest_num}')
+
+#Smallest number
+smallest_num = min(number_list)
+print(f'Smallest: {smallest_num}')
 
